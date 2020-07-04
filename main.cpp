@@ -37,7 +37,7 @@ void Escribir(Matriz* matriz){
 	escribir.close();
 }
 void Leer(){
-	Stack* nose = new Stack();
+	Stack* stack = new Stack();
 	
 	ifstream leer;
 	leer.open("matrices.txt");
@@ -54,9 +54,9 @@ void Leer(){
 			Matriz* nuv = new Matriz(size,id);
 			nuv->meterContenido(numeros);
 			matrices.push_back(nuv);
-			Node* sepa = new Node();
-			sepa->setData(nuv);
-			nose->push(sepa);
+			Node* nodo = new Node();
+			nodo->setData(nuv);
+			stack->push(nodo);
 			
 		}
 		}
