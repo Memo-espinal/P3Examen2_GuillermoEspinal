@@ -12,6 +12,8 @@ class Matriz : public Object
 		Matriz();
 		Matriz(int,char);
 		void meterContenido(vector<int>);
+		char getId();
+		int getSize();
 		int**getContenido();
 		int** suma(int**contm1,int**contm2);
 		int** resta(int**contm1,int**contm2);

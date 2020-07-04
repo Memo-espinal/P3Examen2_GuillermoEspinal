@@ -7,7 +7,7 @@ Matriz::Matriz()
 
 Matriz::Matriz(int Dsize ,char Did){
 	size=Dsize;
-	Did=id;
+	id=Did;
 	contenido =NULL;
 	contenido=new int*[size];
 	for(int i =0 ; i<size; i++){
@@ -15,11 +15,18 @@ Matriz::Matriz(int Dsize ,char Did){
 	}
 	
 }
+char Matriz::getId(){
+	return id;
+}
+int Matriz::getSize(){
+	return size;
+}
 void Matriz::meterContenido(vector<int> numeros){
 	int pos=0;
 	for(int i =0 ; i<size;i++){
 		for(int j =0 ; j<size;j++){
 			contenido[i][j]=numeros[pos];
+			//cout<<"M: SLIE : "<< contenido[i][j];
 			pos++;
 		}
 	}

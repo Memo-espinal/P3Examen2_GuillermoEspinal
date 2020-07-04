@@ -8,6 +8,8 @@ class Node//: public Object
 		Node();
 		void setNext(Node*);
 		Node* getNext();
+		void setData(Object*);
+		
 		~Node();
 	protected:
 		
